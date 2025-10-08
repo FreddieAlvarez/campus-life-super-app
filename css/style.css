@@ -1,0 +1,39 @@
+/* background */
+body {
+    background-color: lightgrey;
+    color: darkslategrey;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Headings */
+h1, h2 {
+    color: darkslateblue;
+}
+
+/* navigation */
+.navbar {
+    background-color: darkslateblue;
+}
+
+.navbar .nav-link {
+    color: white;
+}
+
+/* spacing */
+section {
+    margin-bottom: 20px;
+}
+
+/* buttons */
+button {
+    background-color: blue;
+    color: white;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    color: gray;
+    font-size: 14px;
+    margin-top: 40px;
+}
