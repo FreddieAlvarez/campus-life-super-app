@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Live Campus Updates */
     const liveUpdatesDiv = document.getElementById('live-updates');
-    const API_KEY = "My api key"; /* gotta replace this */
-    const PAGE_ID = "My page id when i get one"; /*gotta replace this too */
+    const API_KEY = "c536fe40debb63a03bde80ccd9b51e3e"; /* API KEY */
+    const PAGE_ID = "international-technical-female-college-in-jeddah-5mchr"; /* Sounds off but it's what instatus gave me hopefully I did it right */
 
     if (liveUpdatesDiv) {
         console.log('API integration spot.');
