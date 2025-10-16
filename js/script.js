@@ -4,8 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (liveUpdatesDiv && fetchButton) {
         fetchButton.addEventListener('click', () => {
+            /*shows laoding message*/
             liveUpdatesDiv.textContent = 'Fetching component status...';
 
+            /*gets information from puhblic Instatus API*/
             fetch('https://api.instatus.com/v1/pages/campus-life-super-app/components')
                 .then(response => {
                     if (!response.ok) {
@@ -15,12 +17,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
                 .then(data => {
                     const components = data.components;
+
+                    /*message for no components*/
                     if (components.length === 0) {
-                        liveUpdatesDiv.textContent = 'No components available.';
+                        liveUpdatesDiv.textContent = 'no components';
                         return;
                     }
 
+                    /*clears content*/
                     liveUpdatesDiv.innerHTML = '';
+
+                    /*loop for components info*/
                     components.forEach(component => {
                         const componentDiv = document.createElement('div');
                         componentDiv.style.border = '1px solid #ccc';
@@ -39,7 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 })
                 .catch(error => {
-                    liveUpdatesDiv.textContent = 'Error getting component status.';
+                    /*error message*/
+                    liveUpdatesDiv.textContent = 'Error getting status';
                     console.error('Fetch error:', error.message);
                 });
         });
